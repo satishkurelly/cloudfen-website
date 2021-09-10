@@ -55,7 +55,7 @@ import { RegisterComponent } from './register/register.component';
 
 import { MatFormFieldModule } from '@angular/material/form-field';
 
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 @NgModule({
   declarations: [
@@ -71,7 +71,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     ContactComponent,
     LoginComponent,
     RegisterComponent,
-    NgbModule
    
   ],
   imports: [
