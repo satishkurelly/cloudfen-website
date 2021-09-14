@@ -1,0 +1,72 @@
+/* @import url('https //fonts.googleapis.com/css family=poppins'); */
+*{
+   margin: 0;
+   padding: 0;
+   user-select: none;
+   /* color: white; */
+   box-sizing: border-box;
+   font-family: sans-serif;
+}
+.sidebar{
+   position: fixed;
+   width: 250px;
+   height: 100%;
+   left: 0;
+   background: #1b1b1b;
+}
+nav ul{
+   background-color: black;
+   height: 100%;
+   width: 100%;
+   list-style: none;
+}
+nav ul li{
+   line-height: 50px;
+   border-bottom: 1px solid rgba(red, green, blue, alpha);
+}
+nav ul li a{
+   position: relative;
+   color: white;
+   text-decoration: none;
+   font: 18px;
+   padding-left: 40px;
+   font-weight: 500;
+   display: block;
+   width: 100%;
+   border-left: 3px solid transparent;
+}
+nav ul li a:hover{
+   color: cyan;
+   background: #1e1e1e;
+   border-left-color: cyan;
+}
+nav ul ul{
+   position: static;
+   display: none;
+}
+nav ul .feat-show.show{
+   display: block;
+}
+nav ul .serv-show.show{
+   display: block;
+}
+nav ul ul li{
+   line-height: 32px;
+   border-bottom: none;
+}
+nav ul ul li a{
+   font-size: 17px;
+   color: #e6e6e6;
+   padding-left: 80px;
+}
+nav  ul li a span{
+   position: absolute;
+   top: 50%;
+   right: 20px;
+   transform: translateY(-50%);
+   font-size: 22px;
+   transition: transform 0.4s;
+}
+nav  ul li a:hover span{
+   transform: translateY(-50%) rotate(-180deg); 
+}

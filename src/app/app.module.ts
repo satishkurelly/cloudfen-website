@@ -54,7 +54,15 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 
 import { MatFormFieldModule } from '@angular/material/form-field';
-
+import {LayoutModule} from '@angular/cdk/layout';
+import { MatDividerModule } from '@angular/material/divider';
+import { HealthComponent } from './health/health.component';
+import { FinancialComponent } from './financial/financial.component';
+import { RetailComponent } from './retail/retail.component';
+import { TeleComponent } from './tele/tele.component';
+import { ManufacturingComponent } from './manufacturing/manufacturing.component';
+import { JobComponent } from './job/job.component';
+import { RefferalComponent } from './refferal/refferal.component';
 
 
 @NgModule({
@@ -71,6 +79,13 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     ContactComponent,
     LoginComponent,
     RegisterComponent,
+    HealthComponent,
+    FinancialComponent,
+    RetailComponent,
+    TeleComponent,
+    ManufacturingComponent,
+    JobComponent,
+    RefferalComponent,
    
   ],
   imports: [
@@ -84,7 +99,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     MatButtonModule,
     FlexLayoutModule,
     BrowserAnimationsModule ,
-    MatFormFieldModule
+    MatFormFieldModule,
+    LayoutModule,MatDividerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

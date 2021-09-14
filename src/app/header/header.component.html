@@ -1,234 +1,263 @@
-<div class="container" fxFlex="100%">
-<nav class="navbar navbar-expand-xl  navbar-dark" (scroll)="onscroll()" [ngClass]="navbarfixed?'fixed':'nofixed'">
-  <div style="height: 30vh;">
-    <mat-toolbar class="secondToolbar" [ngClass]="{'mat-elevation-z1' : true, 'sticky' : isSticky}">
-    
-      <mat-toolbar-row class="header" style="width: auto;">
-        <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
-          <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
-      </button>
-        <span>
-          <img src="assets\images\logosm.png" alt="">
-      </span>
-        <span class="menu-spacer"></span>
-        <div fxShow="true" fxHide.lt-md>
-          <nav id="primary-menu">
+<div class="header">
+  <mat-toolbar-row class="header" style="width: auto;">
+    <button mat-icon-button  fxShow="true" fxHide.gt-sm>
+  <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+</button>
+<img src="assets\images\logosm.png" alt="" style="margin: 0;"  >
+   
+      <!-- <span class="menu-spacer"></span> -->
+    <div fxShow="true" fxHide.lt-md>
+      <nav>
+        <ul>
+          <li><a routerLink = "/home">
+              <div>Home</div>
+            </a>
+          </li>
+          <li class="current"><a routerLink = "/about">
+              <div>ABOUT US</div>
+            </a>
+          </li>
+          <li class="current"><a routerLink = "/service">
+              <div>SERVICES</div>
+            </a>
             <ul>
-              <li><a href="index.html">
-                  <div>Home</div>
+              <li><a href="it.html">
+                  <div><i ></i>IT STAFFING</div>
                 </a>
               </li>
-              <li class="current"><a [routerLink]="['/about']">
-                  <div>ABOUT US</div>
+              <li><a href="product.html">
+                  <div><i ></i>PRODUCT DEVELOPMENT</div>
                 </a>
               </li>
-              <li class="current"><a [routerLink]="['/service']">
-                  <div>SERVICES</div>
-                </a>
-                <ul >
-                  <li ><a href="it.html">
-                      <div><i ></i>IT STAFFING</div>
-                    </a>
-                  </li>
-                  <li><a href="product.html">
-                      <div><i ></i>PRODUCT DEVELOPMENT</div>
-                    </a>
-                  </li>
-                  <li><a href="suppor.html">
-                      <div><i ></i>Maintanace and Support</div>
-                    </a>
-                  </li>
-                  <li><a href="infra.html">
-                      <div><i ></i>Infrastructure</div>
-                    </a>
-                  </li>
-                  <li><a href="recr.html">
-                      <div><i ></i>Recruitment</div>
-                    </a>
-                  </li>
-                  <li><a href="outsourcing.html">
-                      <div><i ></i>Outsourcing</div>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="mega-menu"><a [routerLink]="['/ourfocus']">
-                  <div>OUR FOCUS</div>
+              <li><a href="suppor.html">
+                  <div><i ></i>Maintanace and Support</div>
                 </a>
               </li>
-              <li class="current"><a [routerLink]="['/industries']">
-                  <div>INDUSTRIES</div>
+              <li><a href="infra.html">
+                  <div><i ></i>Infrastructure</div>
                 </a>
-                <ul>
-                  <li><a href="health.html">
-                      <div><i ></i>HEALTHCARE</div>
-                    </a>
-                  </li>
-                  <li><a href="financial.html">
-                      <div><i ></i>FINANCIAL SERVICES </div>
-                    </a>
-                  </li>
-                  <li><a href="retail.html">
-                      <div><i ></i>RETAIL </div>
-                    </a>
-                  </li>
-                  <li><a href="tele.html">
-                      <div><i ></i>TELECOMUNICATIONS</div>
-                    </a>
-                  </li>
-                  <li><a href="manu.html">
-                      <div><i ></i>MANUFACTURING</div>
-                    </a>
-                  </li>
-                </ul>
               </li>
-              <li class="current"><a [routerLink]="['/carrers']">
-                  <div>CAREERS</div>
+              <li><a href="recr.html">
+                  <div><i ></i>Recruitment</div>
                 </a>
-                <ul>
-                  <li><a href="job.html">
-                      <div><i ></i>JOB OPENINGS</div>
-                    </a>
-                  </li>
-                  <li><a href="refferal.html">
-                      <div><i ></i>REFERRAL</div>
-                    </a>
-                  </li>
-  
-                </ul>
               </li>
-              <li class="mega-menu"><a [routerLink]="['/contact']">
-                  <div>CONTACT</div>
+              <li><a href="outsourcing.html">
+                  <div><i ></i>Outsourcing</div>
                 </a>
               </li>
             </ul>
-          </nav>
-        </div>
-      </mat-toolbar-row>
-    </mat-toolbar>
-  
-    <mat-sidenav-container fxFlexFill>
-      <mat-sidenav #sidenav>
-        <mat-nav-list>
-          <a (click)="sidenav.toggle()" href="" mat-list-item>Close</a>
-          <ul>
-              <li><a href="index.html">
-                  <div>Home</div>
+          </li>
+          <li class="mega-menu"><a routerLink = "/ourfocus">
+              <div>OUR FOCUS</div>
+            </a>
+          </li>
+          <li class="current"><a routerLink = "/industries">
+              <div>INDUSTRIES</div>
+            </a>
+            <ul>
+              <li><a routerLink = "/health">
+                  <div><i ></i>HEALTHCARE</div>
                 </a>
               </li>
-              <li class="current"><a [routerLink]="['/about']">
-                  <div>ABOUT US</div>
+              <li><a  routerLink = "/financial">
+                  <div><i ></i>FINANCIAL SERVICES </div>
                 </a>
               </li>
-              <li class="current"><a href="#">
-                  <div>SERVICES</div>
-                </a>
-                <ul>
-                  <li><a href="it.html">
-                      <div><i ></i>IT STAFFING</div>
-                    </a>
-                  </li>
-                  <li><a href="product.html">
-                      <div><i ></i>PRODUCT DEVELOPMENT</div>
-                    </a>
-                  </li>
-                  <li><a href="suppor.html">
-                      <div><i ></i>Maintanace and Support</div>
-                    </a>
-                  </li>
-                  <li><a href="infra.html">
-                      <div><i ></i>Infrastructure</div>
-                    </a>
-                  </li>
-                  <li><a href="recr.html">
-                      <div><i ></i>Recruitment</div>
-                    </a>
-                  </li>
-                  <li><a href="outsourcing.html">
-                      <div><i ></i>Outsourcing</div>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="mega-menu"><a href="focus.html">
-                  <div>OUR FOCUS</div>
+              <li><a  routerLink = "/retail">
+                  <div><i ></i>RETAIL </div>
                 </a>
               </li>
-              <li class="current"><a href="#">
-                  <div>INDUSTRIES</div>
+              <li><a  routerLink = "/tele">
+                  <div><i ></i>TELECOMUNICATIONS</div>
                 </a>
-                <ul>
-                  <li><a href="health.html">
-                      <div><i ></i>HEALTHCARE</div>
-                    </a>
-                  </li>
-                  <li><a href="financial.html">
-                      <div><i ></i>FINANCIAL SERVICES </div>
-                    </a>
-                  </li>
-                  <li><a href="retail.html">
-                      <div><i ></i>RETAIL </div>
-                    </a>
-                  </li>
-                  <li><a href="tele.html">
-                      <div><i ></i>TELECOMUNICATIONS</div>
-                    </a>
-                  </li>
-                  <li><a href="manu.html">
-                      <div><i ></i>MANUFACTURING</div>
-                    </a>
-                  </li>
-                </ul>
               </li>
-              <li class="current"><a href="#">
-                  <div>CAREERS</div>
-                </a>
-                <ul>
-                  <li><a href="job.html">
-                      <div><i ></i>JOB OPENINGS</div>
-                    </a>
-                  </li>
-                  <li><a href="refferal.html">
-                      <div><i ></i>REFERRAL</div>
-                    </a>
-                  </li>
-  
-                </ul>
-              </li>
-              <li class="mega-menu"><a href="contact.html">
-                  <div>CONTACT</div>
+              <li><a  routerLink = "/manufact">
+                  <div><i ></i>MANUFACTURING</div>
                 </a>
               </li>
             </ul>
-            <div class="dropdown">
-              <button class="dropbtn">Dropdown
-                <i class="fa fa-caret-down"></i>
-              </button>
-              <div class="dropdown-content">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
-              </div>
-            </div>
-        </mat-nav-list>
-      </mat-sidenav>
-  
-    </mat-sidenav-container>
-  </div>
-</nav>
+          </li>
+          <li class="current"><a href="#">
+              <div>CAREERS</div>
+            </a>
+            <ul>
+              <li><a  routerLink = "/job">
+                  <div><i ></i>JOB OPENINGS</div>
+                </a>
+              </li>
+              <li><a  routerLink = "/refferal">
+                  <div><i ></i>REFERRAL</div>
+                </a>
+              </li>
+
+            </ul>
+          </li>
+          <li class="mega-menu"><a href="#">
+              <div>CONTACT</div>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </mat-toolbar-row>
 </div>
 
-<!-- <div class="navbar">
-  <a href="#home">Home</a>
-  <a href="#news">News</a>
-  <div class="dropdown">
-    <button class="dropbtn">Dropdown
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
+<!-- <mat-toolbar class="secondToolbar" [ngClass]="{'mat-elevation-z5' : true, 'sticky' : isSticky}">
+  <mat-toolbar-row class="header" style="width: auto;">
+    <button mat-icon-button  fxShow="true" fxHide.gt-sm>
+               <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+           </button>
+    <span>
+               <img src="assets\images\logosm.png" alt="">
+           </span>
+    <span class="menu-spacer"></span>
+    <div fxShow="true" fxHide.lt-md>
+      <nav id="primary-menu">
+        <ul>
+          <li><a href="index.html">
+              <div>Home</div>
+            </a>
+          </li>
+          <li class="current"><a href="#">
+              <div>ABOUT US</div>
+            </a>
+          </li>
+          <li class="current"><a href="#">
+              <div>SERVICES</div>
+            </a>
+            <ul>
+              <li><a href="it.html">
+                  <div><i ></i>IT STAFFING</div>
+                </a>
+              </li>
+              <li><a href="product.html">
+                  <div><i ></i>PRODUCT DEVELOPMENT</div>
+                </a>
+              </li>
+              <li><a href="suppor.html">
+                  <div><i ></i>Maintanace and Support</div>
+                </a>
+              </li>
+              <li><a href="infra.html">
+                  <div><i ></i>Infrastructure</div>
+                </a>
+              </li>
+              <li><a href="recr.html">
+                  <div><i ></i>Recruitment</div>
+                </a>
+              </li>
+              <li><a href="outsourcing.html">
+                  <div><i ></i>Outsourcing</div>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="mega-menu"><a href="#">
+              <div>OUR FOCUS</div>
+            </a>
+          </li>
+          <li class="current"><a href="#">
+              <div>INDUSTRIES</div>
+            </a>
+            <ul>
+              <li><a href="health.html">
+                  <div><i ></i>HEALTHCARE</div>
+                </a>
+              </li>
+              <li><a href="financial.html">
+                  <div><i ></i>FINANCIAL SERVICES </div>
+                </a>
+              </li>
+              <li><a href="retail.html">
+                  <div><i ></i>RETAIL </div>
+                </a>
+              </li>
+              <li><a href="tele.html">
+                  <div><i ></i>TELECOMUNICATIONS</div>
+                </a>
+              </li>
+              <li><a href="manu.html">
+                  <div><i ></i>MANUFACTURING</div>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="current"><a href="#">
+              <div>CAREERS</div>
+            </a>
+            <ul>
+              <li><a href="job.html">
+                  <div><i ></i>JOB OPENINGS</div>
+                </a>
+              </li>
+              <li><a href="refferal.html">
+                  <div><i ></i>REFERRAL</div>
+                </a>
+              </li>
+
+            </ul>
+          </li>
+          <li class="mega-menu"><a href="#">
+              <div>CONTACT</div>
+            </a>
+          </li>
+        </ul>
+      </nav>
     </div>
-  </div>
-</div> -->
+  </mat-toolbar-row>
+</mat-toolbar> -->
+
+<!-- <mat-sidenav-container>
+  <mat-sidenav #sidenav>
+    <mat-nav-list>
+      <nav class="sidebar">
+        <ul>
+          <li><a href="#">home</a></li>
+          <li>
+            <a href="#" class="feat-btn">contact
+              <span class="fas fa-caret-down first"></span>
+            </a>
+            <ul class="feat-show">
+              <li><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+            </ul>
+          </li>
+          <li><a href="#">about</a></li>
+          <li>
+            <a href="#" class="serv-btn">service
+              <span class="fas fa-caret-down second"></span>
+            </a>
+            <ul class="serv-show">
+              <li><a href="#">A</a></li>
+              <li><a href="#">B</a></li>
+            </ul>
+          </li>
+          
+        </ul>
+
+      </nav>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div style="height: 88vh;">
+        <mat-toolbar color="primary">
+          <button  mat-icon-button 
+                   aria-label="Menu"
+                   (click)="sidenav.open()">
+          <mat-icon>menu</mat-icon>
+        </button>  
+  </mat-toolbar>
+    <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<script>
+  $('.feat-btn').click(function(){
+    $('nav ul .feat-show').toggleClass("show");
+    $('nav ul .first').toggleClass("rotate");
+  });
+  $('.serv-btn').click(function(){
+    $('nav ul .serv-show').toggleClass("show1");
+    $('nav ul .second').toggleClass("rotate");
+  });
+</script> -->
